@@ -5,14 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
     loginForm.addEventListener('submit', async (event) => {
         event.preventDefault();
 
-        console.log('Formulario enviado');
-
         const formData = new FormData(loginForm);
         const username = formData.get('username');
         const password = formData.get('password');
 
-        console.log('Usuario:', username);
-        console.log('Contraseña:', password);
         try {
             const response = await fetch('http://backendcac.alwaysdata.net/login', {
                 method: 'POST',
@@ -27,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const data = await response.json();
-            console.log('Token JWT:', data.token);
             localStorage.setItem('token', data.token);
             window.location.href = '/'
         } catch (error) {
