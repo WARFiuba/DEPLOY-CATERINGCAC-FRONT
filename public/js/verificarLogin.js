@@ -3,7 +3,7 @@ const token = localStorage.getItem('token');
 if (!token){
     window.location.href = '/login'
 } else {
-    const response = fetch(`http://localhost:3000/${token}`, {
+    const response = fetch(`http://backendcac.alwaysdata.net/${token}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'

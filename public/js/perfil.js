@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const token = localStorage.getItem('token')
 
-    fetch(`http://localhost:3000/datos/${token}`)
+    fetch(`http://backendcac.alwaysdata.net/datos/${token}`)
         .then(response => response.json())
         .then(data => {
             datos.innerHTML += `

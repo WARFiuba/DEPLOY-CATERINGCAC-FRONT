@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const precio_parcial = cantidad * precio;
 
 
-            const response = await fetch(`http://localhost:3000/tienePedido/${token}`, {
+            const response = await fetch(`http://backendcac.alwaysdata.net/tienePedido/${token}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (!response.ok){
 
-                await fetch(`http://localhost:3000/pedidos/nuevo/${token}`, {
+                await fetch(`http://backendcac.alwaysdata.net/pedidos/nuevo/${token}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const detalle = await response.json();
                 const id_detalle = detalle.id_detalle
 
-                await fetch(`http://localhost:3000/pedidos/actualizar/${token}`, {
+                await fetch(`http://backendcac.alwaysdata.net/pedidos/actualizar/${token}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'

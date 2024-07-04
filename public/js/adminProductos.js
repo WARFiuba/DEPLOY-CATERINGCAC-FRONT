@@ -1,4 +1,4 @@
-fetch('http://localhost:3000/productos')
+fetch('http://backendcac.alwaysdata.net/productos')
     .then(response => response.json())
     .then(data => {
         const productos = data;

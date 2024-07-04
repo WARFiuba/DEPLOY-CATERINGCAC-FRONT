@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('email:', email);
         console.log('Contraseña:', password);
         try {
-            const response = await fetch('http://localhost:3000/registro', {
+            const response = await fetch('http://backendcac.alwaysdata.net/registro', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

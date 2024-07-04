@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     function fetchData(categoria) {
-        fetch(`http://localhost:3000/productos/${encodeURIComponent(categoria)}`)
+        fetch(`http://backendcac.alwaysdata.net/productos/${encodeURIComponent(categoria)}`)
         .then(response => response.json())
         .then(data => {
             console.log('Data from backend:', data);

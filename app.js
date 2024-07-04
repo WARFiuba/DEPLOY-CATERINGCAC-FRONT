@@ -37,7 +37,7 @@ app.get('/productos', async (req, res) => {
 app.get('/producto/:categoria', async (req, res) => {
     const {categoria} = req.params;
     try {
-        const response = await fetch(`http://localhost:3000/productos/${encodeURIComponent(categoria)}`);
+        const response = await fetch(`http://backendcac.alwaysdata.net/productos/${encodeURIComponent(categoria)}`);
         if (!response.ok) {
             throw new Error('Error al obtener los datos');
         }
@@ -74,6 +74,6 @@ app.get('/carrito', async (req, res) => {
     res.render('pages/carrito', {pageTitle: 'Carrito'})
 })
 
-const PORT = 4000;
+const PORT = 8100;
 
 app.listen(PORT, () => console.log(`Servidor de frontend iniciado en http://localhost:${PORT}`));

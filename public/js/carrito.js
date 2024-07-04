@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const token = localStorage.getItem('token')
 
-    fetch(`http://localhost:3000/pedido/${token}`)
+    fetch(`http://backendcac.alwaysdata.net/pedido/${token}`)
         .then(response => response.json())
         .then(data => {
 

@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Usuario:', username);
         console.log('Contraseña:', password);
         try {
-            const response = await fetch('http://localhost:3000/login', {
+            const response = await fetch('http://backendcac.alwaysdata.net/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
